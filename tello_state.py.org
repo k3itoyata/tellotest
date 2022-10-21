@@ -5,19 +5,20 @@ import curses
 INTERVAL = 0.2
 
 
-
 def report(str):
     stdscr.addstr(0, 0, str)
     stdscr.refresh()
+
 
 if __name__ == "__main__":
     stdscr = curses.initscr()
     curses.noecho()
     curses.cbreak()
 
-    local_ip = ''
+    local_ip = 'TELLO-9F1A27'
     local_port = 8890
-    socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # socket for sending cmd
+    # socket for sending cmd
+    socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socket.bind((local_ip, local_port))
 
     tello_ip = '192.168.10.1'
@@ -41,5 +42,3 @@ if __name__ == "__main__":
         curses.echo()
         curses.nocbreak()
         curses.endwin()
-
-
