@@ -1,0 +1,9 @@
+command
+mon
+mdirection 0
+takeoff
+delay2
+jump 120 30 100 20 100 mid1 mid7
+go 50 30 100 40 m7
+delay 2
+land
